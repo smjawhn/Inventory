@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManger : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class UIManger : MonoBehaviour
     [SerializeField] private UIStatus uistatus;
     [SerializeField] private UIInventory uiInventory;
 
+    public UIMainMenu MainMenu => uiMainmenu;
+    public UIStatus Status => uistatus;
+    public UIInventory Inventory => uiInventory;
 
     private void Awake()
     {
@@ -19,5 +23,7 @@ public class UIManger : MonoBehaviour
             return;
         }
         instance = this;
+
+        
     }
 }
