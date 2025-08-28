@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.008405943, g: 0.06355405, b: 0.1980908, a: 1}
+  m_IndirectSpecularColor: {r: 0.0084599415, g: 0.06355195, b: 0.19811583, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6014,10 +6014,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b026df1f502a2479bb2ab8e84631f79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusBtn: {fileID: 0}
-  inventoryBtn: {fileID: 0}
-  statusDisplay: {fileID: 0}
-  inventoryDisplay: {fileID: 0}
+  statusBtn: {fileID: 853585156}
+  inventoryBtn: {fileID: 1017982735}
+  nickNameTxt: {fileID: 263485921}
+  levelTxt: {fileID: 798740327}
+  expTxt: {fileID: 2087488396}
+  haveGoldTxt: {fileID: 2107177865}
 --- !u!1 &1733903974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6376,6 +6378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2fdf02234e74a4e9e6a591110ff18a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backBtn: {fileID: 1311398173}
 --- !u!1 &1786541714
 GameObject:
   m_ObjectHideFlags: 0
@@ -6954,6 +6957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6ef0638f12745c1a0dfe4ebdb21de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backBtn: {fileID: 842784036}
+  atkTxt: {fileID: 1612529607}
+  defTxt: {fileID: 1293372842}
+  hpTxt: {fileID: 2140101389}
+  criTxt: {fileID: 95397193}
 --- !u!1 &2041866493
 GameObject:
   m_ObjectHideFlags: 0

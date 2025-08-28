@@ -10,6 +10,7 @@ public class UIManger : MonoBehaviour
     [SerializeField] private UIMainMenu uiMainmenu;
     [SerializeField] private UIStatus uistatus;
     [SerializeField] private UIInventory uiInventory;
+    
 
     public UIMainMenu MainMenu => uiMainmenu;
     public UIStatus Status => uistatus;
@@ -24,6 +25,27 @@ public class UIManger : MonoBehaviour
         }
         instance = this;
 
+    }
+
+
+    public void ShowStatus()
+    {
+        uiMainmenu.StatusBtn.gameObject.SetActive(false);
+        uiMainmenu.InventoryBtn.gameObject.SetActive(false);
+        uistatus.gameObject.SetActive(true);
         
+    }
+    public void ShowInventory()
+    {
+        uiMainmenu.StatusBtn.gameObject.SetActive(false);
+        uiMainmenu.InventoryBtn.gameObject.SetActive(false);
+        uiInventory.gameObject.SetActive(true);
+    }
+    public void BacktoMain()
+    {
+        uistatus.gameObject.SetActive(false);
+        uiInventory.gameObject.SetActive(false);
+        uiMainmenu.StatusBtn.gameObject.SetActive(true);
+        uiMainmenu.InventoryBtn.gameObject.SetActive(true);
     }
 }

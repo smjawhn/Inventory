@@ -7,13 +7,21 @@ using TMPro;
 public class UIMainMenu : MonoBehaviour
 {
     [Header("Button")]
-    public Button statusBtn;
-    public Button inventoryBtn;
+    [SerializeField] private Button statusBtn;
+    [SerializeField] private Button inventoryBtn;
 
     [Header("Character Info")]
-    public TMP_Text nickNameTxt;
-    public TMP_Text levelTxt;
-    public TMP_Text expTxt;
+    [SerializeField] private TMP_Text nickNameTxt;
+    [SerializeField] private TMP_Text levelTxt;
+    [SerializeField] private TMP_Text expTxt;
+    [SerializeField] private TMP_Text haveGoldTxt;
+
+    public Button StatusBtn => statusBtn;
+    public Button InventoryBtn => inventoryBtn;
+    public TMP_Text nickNameText => nickNameTxt;
+    public TMP_Text levelText => levelTxt;
+    public TMP_Text expText => expTxt;
+    public TMP_Text haveGoldText => haveGoldTxt;
 
     private void Start()
     {
@@ -23,23 +31,16 @@ public class UIMainMenu : MonoBehaviour
 
     public void OpenMainmenu()
     {
-        statusBtn.gameObject.SetActive(true);
-        inventoryBtn.gameObject.SetActive(true);
-        
+        UIManger.instance.BacktoMain();
     }
 
     public void OpenStatus()
     {
-        statusBtn.gameObject.SetActive(false);
-        inventoryBtn.gameObject.SetActive(false);
-        
-
+        UIManger.instance.ShowStatus();
     }
 
     public void OpenInventory()
     {
-        statusBtn.gameObject.SetActive(false);
-        inventoryBtn.gameObject.SetActive(false);
-        
+        UIManger.instance.ShowInventory();
     }
 }
